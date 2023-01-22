@@ -1,0 +1,105 @@
+.table-wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+
+table {
+  width: 50vw;
+  border-spacing: unset;
+}
+
+th {
+  height: 50px;
+}
+
+td {
+  height: 40px;
+  box-sizing: border-box;
+}
+
+th,
+td,
+table {
+  border: 1px solid rgb(175, 172, 172);
+}
+
+tr {
+  cursor: pointer;
+}
+
+.about {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.form-wrapper {
+  flex: 1;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  width: 100px;
+}
+
+.color {
+  width: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 1px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(163, 149, 177);
+}
+
+button:hover {
+  background-color: rgb(155, 127, 184);
+}
+
+button:active {
+  background-color: rgb(113, 90, 138);
+}
+
+.pagination button {
+  height: 40px;
+  width: 40px;
+}
+
+form button {
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+form label {
+  margin-left: 10px;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 400px;
+  height: 30px;
+  max-width: 40vw;
+  margin-top: 5px;
+  padding: 0 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(175, 172, 172);
+}

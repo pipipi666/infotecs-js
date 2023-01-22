@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <input
+        type="checkbox"
+        id="firstName-show"
+        name="firstName-show"
+        onclick="toggleColumn()"
+        checked
+      />
+      <label for="firstName-show">Имя</label>
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        id="lastName-show"
+        name="lastName-show"
+        onclick="toggleColumn()"
+        checked
+      />
+      <label for="lastName-show">Фамилия</label>
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        id="about-show"
+        name="about-show"
+        onclick="toggleColumn()"
+        checked
+      />
+      <label for="about-show">Описание</label>
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        id="eyeColor-show"
+        name="eyeColor-show"
+        onclick="toggleColumn()"
+        checked
+      />
+      <label for="eyeColor-show">Цвет глаз</label>
+    </div>
+    <div class="table-wrapper">
+      <div>
+        <table>
+          <thead>
+            <tr id="table-head">
+              <th class="name" id="firstName" onclick="sortTable(this)">Имя</th>
+              <th class="name" id="lastName" onclick="sortTable(this)">
+                Фамилия
+              </th>
+              <th id="about" onclick="sortTable(this)">Описание</th>
+              <th class="color" id="eyeColor" onclick="sortTable(this)">
+                Цвет глаз
+              </th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <div class="pagination" id="pagination"></div>
+      </div>
+      <div class="form-wrapper">
+        <form id="form" onsubmit="submitForm(event)">
+          <div>
+            <label for="firstName-input">Имя</label>
+            <input id="firstName-input" type="text" />
+          </div>
+          <div>
+            <label for="lastName-input">Фамилия</label>
+            <input id="lastName-input" type="text" />
+          </div>
+          <div>
+            <label for="about-input">Описание</label>
+            <input id="about-input" type="text" />
+          </div>
+          <div>
+            <label for="eyeColor-input">Цвет глаз</label>
+            <input id="eyeColor-input" type="text" />
+          </div>
+          <div class="btns">
+            <button type="submit">Сохранить</button>
+            <button onclick="hideForm()">Отменить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
